@@ -86,10 +86,7 @@
     //TextField Place Holder Color
     [self CB_TextFieldsOPlaceHolderColor:CB_textFieldsPassword];
 }
-- (void)textFieldDidChange:(UITextField *)sender
-{
-    NSLog(@"%@",sender.text);
-}
+
 #pragma mark setTextFieldTag
 -(void)setTextFieldTag{
     //Custom KeyBoard
@@ -459,7 +456,10 @@ static NSCharacterSet* __nonNumbersSet;
     }
     return YES;
 }
-
+- (void)textFieldDidChange:(UITextField *)sender
+{
+    NSLog(@"%@",sender.text);
+}
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     if (CB_txtFirstName==textField){
         [textField setInputAccessoryView:[keyBoard getToolbarWithPrevNextDone:NO :YES]];
