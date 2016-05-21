@@ -1,0 +1,5 @@
+target “ClickBid” do
+pod "Braintree"
+pod 'AFNetworking', '~> 3.0'
+pod 'SVProgressHUD'
+end
